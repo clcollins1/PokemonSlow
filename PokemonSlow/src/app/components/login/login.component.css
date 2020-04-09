@@ -1,0 +1,11 @@
+.container{
+    position: relative;
+    width:20em;
+    align-items: center;
+    align-content: center;
+}
+
+html,body{
+    background-image: url(http://up.ipaddesk.com/pic/51/96/bf/5196bf587a75100e48d6ed1140e72f41.jpg);
+    background-size:cover;
+}

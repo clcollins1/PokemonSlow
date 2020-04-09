@@ -1,14 +1,20 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet> 
 <div class="card mx-auto text-center w-50">
-    <img class="card-img-top" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png" alt="Card image cap">
+    <img class="card-img-top" [src]= "encounteredPokemon.imageUrl" alt="Fetch and encounter to begin">
     <div class="card-body">
-        <h5 class="card-title">Pokemon Name</h5>
-        <span class="card-text">Pokemon Id</span>
-        <span class = "card-text">Type</span>
+        <h5 class="card-title">{{ encounteredPokemon.name }}</h5>
+        <span class="card-text">{{ encounteredPokemon.types }}</span>
+        <div>
+            <span class = "card-text">{{ pokeId }}</span>
+        </div>
+        
     </div>
     <div class="card-body">
-        <button> New Encounter </button>
-        <button> Catch(ball count = ?) </button>
+        <span class = "card-text"> (ball count = {{ ballCount }})</span>
+        <div>
+            <button class="btn btn-primary" (click)="fetchEncounter()" > New Encounter </button>
+            <button class="btn btn-primary" (click)="attemptCatch()"> Catch </button>
+        </div> 
     </div>
 </div>

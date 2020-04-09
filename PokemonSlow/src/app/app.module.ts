@@ -19,14 +19,15 @@ import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-deta
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    AdventureComponent
+    AdventureComponent,
+    PokedexDetailComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
-    PokedexDetailComponent,
+    // PokedexDetailComponent,
     BrowserModule,
     HttpClientModule
   ],

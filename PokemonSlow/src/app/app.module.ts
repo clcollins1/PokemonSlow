@@ -9,7 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AdventureComponent } from './components/adventure/adventure.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 
 
 @NgModule({
@@ -24,7 +25,10 @@ import { AdventureComponent } from './components/adventure/adventure.component';
     BrowserModule,
     RouterModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    PokedexDetailComponent,
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

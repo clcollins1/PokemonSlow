@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { AdventureComponent } from './components/adventure/adventure.component';
+import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 
 
 
@@ -11,6 +12,7 @@ const routes : Routes = [
   {component:LoginComponent, path:'login'},
   {component:HomeComponent, path:'home'},
   {component:AdventureComponent,path:'adventure'},
+  {component:PokedexDetailComponent,path:'pokedex-detail'},
   {component:LoginComponent, path:''},
   {component:LoginComponent, path: '**'}
 ]

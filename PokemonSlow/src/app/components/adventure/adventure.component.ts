@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokedexDetails } from 'src/app/models/PokedexDetails';
 import { PokeApiService } from 'src/app/services/poke-api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adventure',
@@ -12,8 +13,9 @@ export class AdventureComponent implements OnInit {
   encounteredPokemon: PokedexDetails;
   pokeId: string;
   ballCount;
+  catchChance;
 
-  constructor(private pokeApiService: PokeApiService) { }
+  constructor(private pokeApiService: PokeApiService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -23,7 +25,8 @@ export class AdventureComponent implements OnInit {
   fetchEncounter() {
 
     // when we get encounter pokemon from backend this sends the id to the service
-    this.pokeId = '25';
+    this.pokeId = Math.floor((Math.random() * 151) + 1).toString();
+
 
     this.pokeApiService.getFromID(this.pokeId).subscribe((result: any) => {
 
@@ -33,9 +36,9 @@ export class AdventureComponent implements OnInit {
       this.encounteredPokemon.name = result.name;
 
       let isFirst = true;
-      for(const type of result.types) {
+      for (const type of result.types) {
 
-        if(!isFirst) {
+        if (!isFirst) {
           this.encounteredPokemon.types += ', ';
         }
         isFirst = false;
@@ -49,7 +52,17 @@ export class AdventureComponent implements OnInit {
   }
 
   attemptCatch() {
-
+    if (this.ballCount > 0) {
+    this.ballCount--;
+    this.catchChance = 25;
+    const catchAttempt = Math.floor((Math.random() * 1000) + 1);
+    if (catchAttempt <= (this.catchChance * 10)) {
+      console.log('pokemon caught');
+      this.router.navigate(['/poke-detail']);
+    }
+  } else {
+    console.log('No pokeballs available');
+  }
   }
 
 }

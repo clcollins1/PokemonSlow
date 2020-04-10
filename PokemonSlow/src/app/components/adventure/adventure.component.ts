@@ -18,13 +18,14 @@ export class AdventureComponent implements OnInit {
   constructor(private pokeApiService: PokeApiService, private router: Router) { }
 
   ngOnInit(): void {
-
+    this.fetchEncounter();
     this.ballCount = 25;
   }
 
   fetchEncounter() {
 
     // when we get encounter pokemon from backend this sends the id to the service
+    // TODO grab a weighted random id from the back-end and send to here with promise or observable
     this.pokeId = Math.floor((Math.random() * 151) + 1).toString();
 
 

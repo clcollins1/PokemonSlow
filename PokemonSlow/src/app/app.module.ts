@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AdventureComponent } from './components/adventure/adventure.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
+import { RegistrationComponent } from './components/registration/registration.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-deta
     HomeComponent,
     LoginComponent,
     AdventureComponent,
-    PokedexDetailComponent
+    PokedexDetailComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

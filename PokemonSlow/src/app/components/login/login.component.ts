@@ -18,7 +18,13 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     console.log("pressed signin");
-    this.router.navigate(['/home'])
+    // TODO implement service that verifies username/password and returns their user id stored in a service
+    this.router.navigate(['pokedex-detail'])
+  }
+
+  register(){
+    console.log("pressed registration");
+    this.router.navigate(['registration']);
   }
 
 }

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AdventureComponent implements OnInit {
 
-  encounteredPokemon: PokedexDetails;
+  encounteredPokemon = new PokedexDetails();
   pokeId: string;
   ballCount;
   catchChance;
@@ -59,7 +59,7 @@ export class AdventureComponent implements OnInit {
     const catchAttempt = Math.floor((Math.random() * 1000) + 1);
     if (catchAttempt <= (this.catchChance * 10)) {
       console.log('pokemon caught');
-      this.router.navigate(['/poke-detail']);
+      this.router.navigate(['/pokedex-detail']);
     }
   } else {
     console.log('No pokeballs available');

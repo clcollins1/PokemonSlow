@@ -13,7 +13,7 @@ export class PokeApiService {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/?offset=${startPokemonID - 1}&limit=${endPokemonID - startPokemonID + 1}`);
   }
 
-  getFromID(pokemonID: number): Observable<Object> {
+  getFromID(pokemonID: any): Observable<Object> {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`);
   }
 }

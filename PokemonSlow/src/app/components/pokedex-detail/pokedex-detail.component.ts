@@ -52,7 +52,8 @@ export class PokedexDetailComponent implements OnInit {
         detail.height = data.height;
         detail.id = parseInt(data.id);
         detail.weight = data.weight;
-        detail.name = data.name;
+        //for some reason all the names are lowercase. make first letter uppercase
+        detail.name = `${data.name[0].toUpperCase()}${data.name.substring(1)}`;
         detail.species = data.species.name;
         detail.totalCollected = this.pokemonById[data.id].total;
 

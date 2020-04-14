@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AdventureComponent } from './components/adventure/adventure.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 
@@ -31,7 +32,8 @@ import { RegistrationComponent } from './components/registration/registration.co
     FormsModule,
     // PokedexDetailComponent,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

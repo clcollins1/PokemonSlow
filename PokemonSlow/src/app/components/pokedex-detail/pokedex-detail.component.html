@@ -15,12 +15,15 @@
                 <img class="card-img-top" [src]="detail.imageUrl" alt="Pokemon" style="width:100%">
                 <div class="card-body">
                     <h2 class="card-title text-center">{{detail.name}}</h2>
+                    <table>
+                        <tr><td class="brdr">Type</td><td>{{detail.types}}</td></tr>
+                        <tr class="gray-bg"><td class="brdr pr-2">Collected</td><td>{{detail.totalCollected}}</td></tr>
+                        <tr><td class="brdr">Height</td><td>{{detail.height}}</td></tr>
+                        <tr class="gray-bg"><td class="brdr">Weight</td><td>{{detail.weight}}</td></tr>
+                        <tr><td class="brdr">Abilities</td><td class="pl-2">{{detail.abilities}}</td></tr>
+                    </table>
                     <!--not sure if we should show the species. it is the same as the name-->
                     <!--<p class="card-text m-0">species: {{detail.species}}</p>-->
-                    <p class="card-text m-0">Type: {{detail.types}}</p>
-                    <p class="card-text m-0">Total Collected: {{detail.totalCollected}}</p>
-                    <p class="card-text m-0">Height: {{detail.height}} Weight: {{detail.weight}}</p>
-                    <p class="card-text m-0">Abilities: {{detail.abilities}}</p>
                     <div class="mt-3 text-center" *ngIf="detail.canEvolve">
                         <a href="#" class="btn btn-primary">Evolve</a>
                     </div>

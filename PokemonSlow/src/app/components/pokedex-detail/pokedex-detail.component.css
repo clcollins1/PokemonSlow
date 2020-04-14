@@ -1,0 +1,11 @@
+.brdr {
+
+    border-color: gray;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.gray-bg {
+
+    background: rgb(239, 239, 239);
+}

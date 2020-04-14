@@ -1,10 +1,16 @@
 <div>
 
+    <!--pagination-->
+    <div class="m-5 text-center">
+        <div *ngFor="let detail of details | paginate: { itemsPerPage: perPage, currentPage: pageNum }"></div>
+        <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
+    </div>
+
     <div class="container">
         <div class="row">
 
             <!--bootstrap 4 card-->
-            <div class="card col-sm-12 col-lg-3 mx-auto text-center" *ngFor="let detail of details">
+            <div class="card col-sm-12 col-lg-3 mx-auto text-center" *ngFor="let detail of detailsOnPage">
                 <img class="card-img-top" [src]="detail.imageUrl" alt="Pokemon" style="width:100%">
                 <div class="card-body">
                     <h2 class="card-title text-center">{{detail.name}}</h2>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-detail.component';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { PokedexDetailComponent } from './components/pokedex-detail/pokedex-deta
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
